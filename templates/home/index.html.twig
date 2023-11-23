@@ -3,7 +3,24 @@
 {% block title %}Page d'accueil{% endblock %}
 
 {% block body %}
-    <h1>Bienvenue sur notre page d'accueil</h1>
-    <p>Ceci est une page d'accueil fictive.</p>
-    <img width="50" height="50" src="{{ asset('images/logo.png') }}" alt="Symfony!" />
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div style='max-width: 470px;
+                width: 100%;
+                background: url("{{ asset('images/elli1.svg') }}") no-repeat;'>
+            <img width="322" height="427" src="{{ asset('images/img1.svg') }}" alt="Etudiant" />
+        </div>
+        <div>
+            <h1 style="line-height: 60px;font-family: 'Prompt', sans-serif; font-size: 40px;margin-bottom: 30px;">Innovation, Formation, Réussite <br>Ensemble vers l'Excellence à l'IUT.</h1>
+            <div style="text-align: end;">
+            <a href="#" style="text-decoration: none;
+    background: var(--light-azure);
+    padding: 12px 60px;
+    color: #000;
+    border-radius: 30px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 20px;">DECOUVRIR</a>
+            </div>
+        </div>
+    </div>
+    </header>
 {% endblock %}
