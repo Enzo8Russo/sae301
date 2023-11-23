@@ -1,0 +1,43 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+menu:
+    path: /menu
+    controller: App\Controller\MenuController::index
+
+connexion:
+    path: /connexion
+    controller: App\Controller\ConnexionController::index
+
+inscription:
+    path: /inscription
+    controller: App\Controller\InscriptionController::index
+    methods: ['POST']
+
+app_inscription_success:
+    path: /inscription-success
+    controller: App\Controller\InscriptionController::success
+
+profil:
+    path: /profil
+    controller: App\Controller\ProfilController::index
+
+devoir:
+    path: /devoir
+    controller: App\Controller\DevoirController::index
+
+recherche:
+    path: /recherche
+    controller: App\Controller\RechercheController::index
+
+recherche_resultat:
+    path: /recherche/resultat
+    controller: App\Controller\RechercheController::resultat
+    methods: ['POST']

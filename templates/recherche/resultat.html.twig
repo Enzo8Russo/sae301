@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Résultat de la recherche{% endblock %}
+
+{% block body %}
+    <h1>Résultat de la recherche</h1>
+    {% if query is defined %}
+        <p>Vous avez recherché : {{ query }}</p>
+    {% else %}
+        <p>Aucune recherche effectuée.</p>
+    {% endif %}
+{% endblock %}

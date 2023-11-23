@@ -1,0 +1,84 @@
+<nav class="top-menu">
+    <div style="display: flex;
+    justify-content: space-between;
+    align-items: center;">
+        <a href="{{ path('app_home') }}" class="logo--menu">
+            <img style="margin-bottom: 10px;" src="{{ asset('images/logo-mmi.png') }}" width="50px" height="50px" alt="Accueil" title="Accueil" />
+        </a>
+
+        <div class="desktop-menu">
+            <a href="{{ path('app_home') }}" class="a-menu">Accueil</a>
+            <a href="{{ path('app_devoir') }}" class="a-menu indicator">Devoir</a>
+            <!--<a href="" class="a-menu">Forum</a>-->
+            <a href="{{ path('app_contact') }}" class="a-menu">Contact</a>
+        </div>
+        <div style="display: flex; justify-content: end; align-items: flex-start;">
+            {% if (isAuthenticated is defined and isAuthenticated == true) %}
+                {# L'utilisateur est connecté, affichez l'onglet du profil #}
+                <a href="{{ path('app_profil') }}" class="a-menu btn" style="margin-right: 5px;">
+                    <span style="margin-right: 5px;">Profil</span>
+                    <img src="../img/person-outline.svg" width="23" height="23">
+                </a>
+                <a href="#" class="a-menu btn ala">
+                    <span style="margin-right: 5px;">Déconnexion</span>
+                    <img src="../img/log-out-outline.svg" width="23" height="23">
+                </a>
+            {% else %}
+                {# L'utilisateur n'est pas connecté, affichez les onglets de connexion et d'inscription #}
+                <a href="{{ path('app_connexion') }}" class="a-menu btn" style="margin-right: 5px;">
+                    <span style="margin-right: 5px;">Connexion</span>
+                    <img src="../img/log-in-outline.svg" width="23" height="23">
+                </a>
+                <a href="{{ path('app_inscription') }}" class="a-menu btn ala">
+                    <span style="margin-right: 5px;">Inscription</span>
+                    <img src="../img/log-in-outline.svg" width="23" height="23">
+                </a>
+            {% endif %}
+        </div>
+
+    </div>
+
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+        <ul style="width: 100%;">
+            <li><a class="menu-scan" href="../anime/liste">Anime</a></li>
+            <li><a class="menu-scan" href="../film/liste">Film</a></li>
+            <li><a class="menu-scan" href="../film-anime/liste">Film d'anime</a></li>
+            <li><a class="menu-scan" href="../serie/liste">Série</a></li>
+            <li><a class="menu-scan" href="../profil/classement">Classement</a></li>
+            <?php if (isset($_SESSION['admin']['ok'])) { ?>
+            <li><a class="menu--boutton" href="../admin/accueil">Admin</a></li>
+            <?php } ?>
+            <li><a class="menu--boutton" href="../forum/accueil">Forum</a></li>
+            <li><a class="menu--boutton" href="../profil/membres">Membres</a></li>
+            <?php if (!isset($_SESSION['id'])) { ?>
+            <li><a class="menu--connexion" href="../connexion">Connexion</a></li>
+            <li><a class="menu--connexion" href="../inscription">Inscription</a></li>
+            <?php } else { ?>
+            <li><a class="menu--boutton" href="../profil/mon-profil">Mon profil</a></li>
+            <li><a class="menu--connexion" href="../deconnexion">Déconnexion</a></li>
+            <?php } ?>
+        </ul>
+    </div>
+    <!--<?php require_once('search-box/search-box-mobile.php'); ?>-->
+</nav>
+
+
+
+
+
+
+
+<nav>
+    <ul>
+        <li><a href="">Accueil</a></li>
+        <li><a href="">Devoir</a></li>
+        <li><a href="{{ path('app_profil') }}">Profil</a></li>
+        <li><a href="{{ path('app_connexion') }}">Connexion</a></li>
+        <li><a href="{{ path('app_inscription') }}">Inscription</a></li>
+        <li><a href="{{ path('app_contact') }}">Contact</a></li>
+        <li><a href="{{ path('recherche') }}">Recherche</a></li>
+    </ul>
+</nav>

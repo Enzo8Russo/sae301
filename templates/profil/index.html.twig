@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Profil{% endblock %}
+
+{% block body %}
+    <head>
+        <!-- ... autres balises head ... -->
+        <!-- Ajoute une balise meta pour stocker le chemin de l'avatar -->
+        <meta name="avatar-path" content="{{ asset('images/logo.png') }}">
+    </head>
+
+    <div class="container">
+        <h2>Profil</h2>
+        <div id="profileInfo">
+            <!-- Les informations du profil seront affichées ici -->
+        </div>
+        <button onclick="logout()">Déconnexion</button>
+    </div>
+
+    <script src="{{ asset('js/script-profil.js') }}"></script>
+    </body>
+    </html>
+{% endblock %}
