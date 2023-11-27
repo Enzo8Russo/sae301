@@ -14,3 +14,11 @@ Username: c
 Email: c@gmail.com
 Password: c
 
+Username: test
+Email: tes@gmail.com
+Password: a
+
+Username: test1
+Email: test1@gmail.com
+Password: a
+

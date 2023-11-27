@@ -12,9 +12,21 @@ menu:
     path: /menu
     controller: App\Controller\MenuController::index
 
+footer:
+    path: /footer
+    controller: App\Controller\FooterController::index
+
 connexion:
     path: /connexion
     controller: App\Controller\ConnexionController::index
+
+forum:
+    path: /forum
+    controller: App\Controller\ForumController::index
+
+search:
+    path: /search
+    controller: App\Controller\SearchController::index
 
 inscription:
     path: /inscription
@@ -28,6 +40,10 @@ app_inscription_success:
 profil:
     path: /profil
     controller: App\Controller\ProfilController::index
+
+calendrier:
+    path: /calendrier
+    controller: App\Controller\CalendrierController::index
 
 devoir:
     path: /devoir

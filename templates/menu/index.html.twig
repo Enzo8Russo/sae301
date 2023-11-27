@@ -15,19 +15,23 @@
         <div class="desktop-menu">
             <a href="{{ path('app_home') }}" class="a-menu">Accueil</a>
             <a href="{{ path('app_devoir') }}" class="a-menu indicator">Devoir</a>
-            <!--<a href="" class="a-menu">Forum</a>-->
-            <a href="{{ path('app_contact') }}" class="a-menu">Forum</a>
+            <a href="{{ path('app_search') }}" class="a-menu">Recherche</a>
+            <a href="{{ path('app_forum') }}" class="a-menu">Forum</a>
+            {% if (isAuthenticated is defined and isAuthenticated == true) %}
+            <a href="{{ path('app_calendrier') }}" class="a-menu indicator">Calendrier</a>
+            {% else %}
+            {% endif %}
         </div>
         <div style="display: flex; justify-content: end; align-items: flex-start;">
             {% if (isAuthenticated is defined and isAuthenticated == true) %}
                 {# L'utilisateur est connecté, affichez l'onglet du profil #}
                 <a href="{{ path('app_profil') }}" class="a-menu btn" style="margin-right: 5px;">
                     <span style="margin-right: 5px;">Profil</span>
-                    <img src="../img/person-outline.svg" width="23" height="23">
+                    <img src="{{ asset('images/person-outline.svg') }}" width="23" height="23">
                 </a>
                 <a href="#" class="a-menu btn ala">
                     <span style="margin-right: 5px;">Déconnexion</span>
-                    <img src="../img/log-out-outline.svg" width="23" height="23">
+                    <img src="{{ asset('images/log-out-outline.svg') }}" width="23" height="23">
                 </a>
             {% else %}
                 {# L'utilisateur n'est pas connecté, affichez les onglets de connexion et d'inscription #}
@@ -49,11 +53,13 @@
     <label for="active" class="close"></label>
     <div class="wrapper">
         <ul style="width: 100%;">
-            <li><a class="menu-scan" href="../anime/liste">Accueil</a></li>
-            <li><a class="menu-scan" href="../film/liste">Devoir</a></li>
-            <li><a class="menu--boutton" href="../film-anime/liste">Forum</a></li>
+            <li><a class="menu-scan" href="{{ path('app_home') }}">Accueil</a></li>
+            <li><a class="menu-scan" href="{{ path('app_devoir') }}">Devoir</a></li>
+            <li><a class="menu-scan" href="{{ path('app_search') }}">Recherche</a></li>
+            <li><a class="menu--boutton" href="{{ path('app_forum') }}">Forum</a></li>
             {% if (isAuthenticated is defined and isAuthenticated == true) %}
                 {# L'utilisateur est connecté, affichez l'onglet du profil #}
+                <li><a class="menu--boutton" href="{{ path('app_calendrier') }}">Calendrier</a></li>
                 <li><a class="menu--boutton" href="{{ path('app_profil') }}">Profil</a></li>
                 <li><a class="menu--connexion" href="#">Déconnexion</a></li>
             {% else %}

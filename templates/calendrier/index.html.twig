@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Calendrier{% endblock %}
+{% block body %}
+    </header>
+    <div id="calendar"></div>
+    <div class="navigation">
+        <img src="{{ asset('images/left_arrow.png')}}" alt="Mois précédent" onclick="previousMonth()">
+        <img src="{{ asset('images/right_arrow.png')}}" alt="Mois suivant" onclick="nextMonth()">
+    </div>
+
+    <script src="{{ asset('js/script-calendrier.js') }}"></script>
+    </body>
+    </html>
+{% endblock %}

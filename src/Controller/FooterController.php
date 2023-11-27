@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+class FooterController extends AbstractController
+{
+    #[Route('/footer', name: 'app_footer')]
+    public function footer(): Response
+    {
+        return $this->render('footer/index.html.twig', [
+            'controller_name' => 'FooterController',
+        ]);
+    }
+}
+?>

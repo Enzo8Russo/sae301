@@ -3,24 +3,148 @@
 {% block title %}Page d'accueil{% endblock %}
 
 {% block body %}
-    <div style="display: flex; align-items: center; justify-content: space-between;">
-        <div style='max-width: 470px;
-                width: 100%;
-                background: url("{{ asset('images/elli1.svg') }}") no-repeat;'>
-            <img width="322" height="427" src="{{ asset('images/img1.svg') }}" alt="Etudiant" />
+    <div class="content-section">
+        <div class="container-img-section" style='background: url("{{ asset('images/elli1.svg') }}") no-repeat;background-size: 100%;'>
+            <img class="img-section" src="{{ asset('images/img1.svg') }}" alt="Etudiant" />
         </div>
         <div>
-            <h1 style="line-height: 60px;font-family: 'Prompt', sans-serif; font-size: 40px;margin-bottom: 30px;">Innovation, Formation, Réussite <br>Ensemble vers l'Excellence à l'IUT.</h1>
-            <div style="text-align: end;">
-            <a href="#" style="text-decoration: none;
-    background: var(--light-azure);
-    padding: 12px 60px;
-    color: #000;
-    border-radius: 30px;
-    font-family: 'Prompt', sans-serif;
-    font-size: 20px;">DECOUVRIR</a>
+            <h1 class="titre-section">Innovation, Formation, Réussite <br>Ensemble vers l'Excellence à l'IUT.</h1>
+            <div class="container-btn">
+            <a href="#" class="btn-section">DECOUVRIR</a>
             </div>
         </div>
     </div>
     </header>
+
+    <section>
+        <div>
+            <h2 class="titre-section-1">Optimisez votre réussite académique <br>
+                avec notre application dédiée <br>
+                aux étudiants de l'IUT</h2>
+            <div class="div-5">
+            <div class="div-4">
+
+                <div class="card-1 azer azert">
+                    <div style="text-align: center;">
+                        <img src="{{ asset('images/dossier1.svg') }}" alt="Dossier">
+                    </div>
+                    <div style="color: #000; text-align: center; line-height: 33px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 22px;">Organisez vos rendus et évaluations en un seul endroit.</div>
+                </div>
+
+                <div class="card-1 azert">
+                    <div style="text-align: center;">
+                        <img src="{{ asset('images/img5.svg') }}" alt="Dossier">
+                    </div>
+                    <div style="color: #000; text-align: center; line-height: 33px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 22px;">Simplifiez votre vie étudiante.</div>
+                </div>
+
+                <div class="card-1">
+                    <div style="text-align: center;">
+                        <img src="{{ asset('images/img6.svg') }}" alt="Dossier">
+                    </div>
+                    <div style="color: #000; text-align: center; line-height: 33px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 22px;">Visualisez votre emploi du temps académique en un clin d'œil.</div>
+                </div>
+
+            </div>
+
+            <div class="container-img-section-1" style='background: url("{{ asset('images/elli2.svg') }}") no-repeat;background-size: 100%;'>
+                <img class="img-section" src="{{ asset('images/etudiant2.svg') }}" alt="Etudiant" />
+            </div>
+            </div>
+
+
+        </div>
+    </section>
+
+<section style="margin-bottom: 50px">
+    <div>
+        <h2 class="titre-section-1" style="margin-bottom: 50px;">ACTUALITÉS</h2>
+        <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
+
+            <div class="card-2 poiu">
+                <div style="text-align: center; background: var(--light-azure); border-radius: 40px 40px 0 0; padding: 20px 30px"><h3>Appel à candidatures pour le conseil<br> des sports du SUAPS - étudiants</h3></div>
+                <div class="div-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                <div style="text-align: end"><span style="background: #000;
+    color: #fff;padding: 5px 25px; border-radius: 20px 0 0 20px;">22 Novembre</span></div>
+            </div>
+
+            <div class="card-2 poiua">
+                <div style="text-align: center; background: var(--light-azure); border-radius: 40px 40px 0 0; padding: 20px 30px"><h3>Inscriptions aux concours de<br> recrutement d'enseignants ouvertes</h3></div>
+                <div class="div-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                <div style="text-align: end"><span style="background: #000;
+    color: #fff;padding: 5px 25px; border-radius: 20px 0 0 20px;">08 Decembre</span></div>
+            </div>
+
+            <div class="card-2">
+                <div style="text-align: center; background: var(--light-azure); border-radius: 40px 40px 0 0; padding: 20px 30px"><h3>Jeux de l'URCA<br> 2024</h3></div>
+                <div class="div-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                <div style="text-align: end"><span style="background: #000;
+    color: #fff;padding: 5px 25px; border-radius: 20px 0 0 20px;">08 Fevrier</span></div>
+            </div>
+
+        </div>
+
+        <div class="div-7">
+            <a href="#" class="btn-section">VOIR PLUS</a>
+        </div>
+
+    </div>
+</section>
+    <section style="background: var(--light-azure); padding: 70px 0">
+        <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
+
+            <div class="card-2 poiu mlk">
+                <div style="display: flex; align-items: center; border-radius: 40px 40px 0 0; padding: 20px 30px">
+                    <img src="{{ asset('images/img7.svg') }}" alt="">
+                    <div style="display: grid; padding: 5px 10px;">
+                        <h3>Nassim OUALI</h3>
+                        <span>Métiers de l'internet et du Multimédia</span>
+                        <span>2 ème années</span>
+                    </div>
+                </div>
+                <div class="div-6 aqw">J'ai vraiment aimé cette appli, elle m'a permis<br> de gagner énormément de temps et m'a<br> empêché d'oublier les envois des rendus !</div>
+                <div style="text-align: center"><img style="    max-width: 280px;
+    width: 100%;" src="{{ asset('images/img10.svg') }}" alt=""></div>
+            </div>
+
+            <div class="card-2 poiua mlk">
+                <div style="display: flex; align-items: center; border-radius: 40px 40px 0 0; padding: 20px 30px">
+                    <img src="{{ asset('images/img8.svg') }}" alt="">
+                    <div style="display: grid;padding: 5px 10px;">
+                        <h3>Théo Becker</h3>
+                        <span>Métiers de l'internet et du Multimédia</span>
+                        <span>3 ème années</span>
+                    </div>
+                </div>
+                <div class="div-6 aqw">Cette application m’as permis d’avoir de<br> meilleurs note. <br>Je recommande.</div>
+                <div style="text-align: center"><img style="    max-width: 280px;
+    width: 100%;" src="{{ asset('images/img10.svg') }}" alt=""></div>
+            </div>
+
+            <div class="card-2 mlk">
+                <div style="display: flex; align-items: center; border-radius: 40px 40px 0 0; padding: 20px 30px">
+                    <img src="{{ asset('images/img9.svg') }}" alt="">
+                    <div style="display: grid; padding: 5px 10px;">
+                        <h3>Tommy HA</h3>
+                        <span>Audiovisuel</span>
+                        <span>1 ère années</span>
+                    </div>
+                </div>
+                <div class="div-6 aqw">J'ai gagné non seulement du temps, mais aussi de<br> nombreuses fonctionnalités qui m'ont<br> permis d'augmenter mes notes !</div>
+                <div style="text-align: center"><img style="    max-width: 280px;
+    width: 100%;" src="{{ asset('images/img10.svg') }}" alt=""></div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        
+    </footer>
 {% endblock %}

@@ -549,6 +549,123 @@ button {
     height: 300px !important;
 }
 
+
+footer{
+    font-family: 'Prompt', sans-serif;
+    background-color:#001166;
+    font-weight: 400;
+}
+
+.copyright{
+    text-align: center;
+    font-size:12px;
+    padding: 20px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    font-weight: 400;
+    padding: 50px;
+}
+
+.footer-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content-container h2{
+    padding-bottom: 20px;
+}
+
+.footer-content-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content-link a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-content-link a:hover{
+    color:var(--light-azure);
+}
+
+.footer-content-text{
+    width: 200px;
+    text-align: center;
+}
+
+.footer-content-social img{
+    padding:10px;
+}
+
+#calendar {
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: var(--light-azure);
+    padding: 50px;
+    border-radius: 20px;
+    color: black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    color: black;
+}
+
+th {
+    padding: 10px 30px;
+    background-color: white;
+}
+
+td {
+    padding: 35px;
+    cursor: pointer;
+    border-radius: 60px;
+}
+
+td:hover {
+    background-color: white;
+}
+
+.today {
+    background-color: orange;
+    color: white;
+}
+
+.today:hover {
+    color: black;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.navigation img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+h2{
+    margin-bottom: 30px;
+}
+
 @media screen and (max-width: 1300px) {
     .div-7 {
         text-align: center; margin-top: 10px;
@@ -764,6 +881,15 @@ button {
         border-radius: 5px;
         position: relative;
         box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+    }
+
+    .footer-content{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .footer-content-container{
+        padding-bottom: 50px;
     }
 
 }
