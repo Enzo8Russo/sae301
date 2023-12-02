@@ -26,13 +26,13 @@ function simulateProfileRequest() {
 
 function displayProfileInfo(profileInfo) {
     var profileInfoElement = document.getElementById('profileInfo');
-    profileInfoElement.innerHTML = '<p><strong>Nom d\'utilisateur:</strong> ' + profileInfo.username + '</p>' +
-        '<p><strong>Nom:</strong> ' + profileInfo.nom + '</p>' +
-        '<p><strong>Prénom:</strong> ' + profileInfo.prenom + '</p>' +
-        '<p><strong>Niveau d\'étude:</strong> ' + profileInfo.niveauEtude + '</p>' +
-        '<p><strong>Mail universitaire:</strong> ' + profileInfo.mailUniversitaire + '</p>' +
-        '<p style="display: flex;align-items: center;"><strong>Avatar:</strong> <img width="30" height="30" src="' + profileInfo.avatar + '" alt="Avatar"></p>' +
-        '<p><strong>Bio:</strong> ' + profileInfo.bio + '</p>' +
+    profileInfoElement.innerHTML = '<p><strong>Nom d\'utilisateur:</strong> ' + profileInfo.username + '</p><br><br>' +
+        '<p><strong>Nom:</strong> ' + profileInfo.nom + '</p><br><br>' +
+        '<p><strong>Prénom:</strong> ' + profileInfo.prenom + '</p><br><br>' +
+        '<p><strong>Niveau d\'étude:</strong> ' + profileInfo.niveauEtude + '</p><br><br>' +
+        '<p><strong>Mail universitaire:</strong> ' + profileInfo.mailUniversitaire + '</p><br><br>' +
+        '<p style="display: flex;align-items: center;"><strong>Avatar:</strong> <img style="margin-left: 8px;" width="50" height="50" src="' + profileInfo.avatar + '" alt="Avatar" title="Avatar"></p><br><br>' +
+        '<p><strong>Bio:</strong> ' + profileInfo.bio + '</p><br><br>' +
         '<p><strong>Numéro de téléphone:</strong> ' + profileInfo.numeroTel + '</p>';
 }
 

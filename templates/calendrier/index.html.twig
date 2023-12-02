@@ -3,13 +3,31 @@
 {% block title %}Calendrier{% endblock %}
 {% block body %}
     </header>
-    <div id="calendar"></div>
-    <div class="navigation">
-        <img src="{{ asset('images/left_arrow.png')}}" alt="Mois précédent" onclick="previousMonth()">
-        <img src="{{ asset('images/right_arrow.png')}}" alt="Mois suivant" onclick="nextMonth()">
+
+    <div class="title-calendar">
+        <h1>Bienvenue dans votre espace de calendrier personnel !</h1>
+        <p style="margin-bottom: 20px">Ici, vous pouvez créer un rappel en cliquant sur un jour, pour le supprimer, il suffit de cliquer sur le jour ou vous avez créé votre rappel.</p>
+        <div style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap">
+            <button style="font-weight: 600; color: #000; background: var(--light-azure); margin-bottom: 20px" onclick="activerNotifications()">Activer les notifications</button>
+            <button style="font-weight: 600; color: #000; background: var(--light-azure); margin-bottom: 20px" onclick="desactiverNotifications()">Désactiver les notifications</button>
+        </div>
     </div>
 
+    <div id="calendar"></div>
+    <div class="navigation"></div>
+
     <script src="{{ asset('js/script-calendrier.js') }}"></script>
+    <script>
+        function activerNotifications() {
+            // Code pour activer les notifications
+            alert("Notifications activées !");
+        }
+
+        function desactiverNotifications() {
+            // Code pour désactiver les notifications
+            alert("Notifications désactivées !");
+        }
+    </script>
     </body>
     </html>
 {% endblock %}

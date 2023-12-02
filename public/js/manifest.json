@@ -1,0 +1,27 @@
+{
+  "name": "IntraWEB",
+  "background_color": "#001166",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/wLHWS26.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.imgur.com/wLHWS26.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#001166",
+
+  "start_url": "./index.php",
+  "display": "standalone",
+
+  "service_worker": {
+    "src": "./service-worker.js",
+    "scope": "/"
+  }
+}
+

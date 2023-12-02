@@ -3,18 +3,17 @@
 {% block title %}Mon Profil{% endblock %}
 
 {% block body %}
+    </header>
     <head>
-        <!-- ... autres balises head ... -->
-        <!-- Ajoute une balise meta pour stocker le chemin de l'avatar -->
-        <meta name="avatar-path" content="{{ asset('images/logo.png') }}">
+        <meta name="avatar-path" content="{{ asset('images/img9.png') }}">
     </head>
 
-    <div class="container">
+    <div class="form-container">
+    <div class="form-titre">
         <h2>Profil</h2>
-        <div id="profileInfo">
-            <!-- Les informations du profil seront affichées ici -->
-        </div>
-        <button onclick="logout()">Déconnexion</button>
+    </div>
+        <div id="profileInfo"></div>
+        <a class="form-submit" style="text-decoration: none; padding: 7px 13px;font-family: 'Prompt', sans-serif; border-radius: 30px;" href="{{ path('app_deconnexion') }}">Déconnexion</a>
     </div>
 
     <script src="{{ asset('js/script-profil.js') }}"></script>

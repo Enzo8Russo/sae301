@@ -3,26 +3,29 @@
 {% block title %}Devoir{% endblock %}
 {% block body %}
     </header>
-    <div id="panier">
-
-    </div>
+    <div style="display: flex; justify-content: center; align-items: center">
+    <div id="panier" style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;"></div></div>
 
     <!-- Formulaire pour ajouter un nouvel article -->
-    <form id="addProductForm">
-        <label for="productName">Nom du produit:</label>
-        <input type="text" id="productName" required>
 
-        <label for="productPrice">Prix:</label>
-        <input type="number" id="productPrice" required>
+    <div class="form-container">
+        <div class="form-titre">
+            <h1 class="form-titre_start" style="color:black; margin-right: 8px;">Ajouter</h1>
+            <h1 class="form-titre_end">Un Devoir</h1>
+        </div>
+        <form id="addProductForm">
+            <label class="form-label" for="productName">Titre du Devoir :</label>
+            <input class="form-input" type="text" id="productName" name="productName" required>
 
-        <label for="productQuantity">Quantité:</label>
-        <input type="number" id="productQuantity" required>
+            <label class="form-label" for="productPrice">Description :</label>
+            <input class="form-input" type="text" id="productPrice" name="productPrice" required>
 
-        <label for="productImage">URL de l'image:</label>
-        <input type="text" id="productImage" required>
+            <label class="form-label" for="productDate">Date :</label>
+            <input class="form-input" type="date" id="productDate" name="productDate" required>
 
-        <button type="submit">Ajouter</button>
-    </form>
+            <button class="form-submit" type="submit">Ajouter</button>
+        </form>
+    </div>
 
 
     <script src="{{ asset('js/script-devoir.js') }}"></script>

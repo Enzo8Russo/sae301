@@ -10,10 +10,10 @@
         <div class="footer-content-container">
             <h2>A PROPOS DE NOUS</h2>
             <div class="footer-content-link">
-                <a href="">Qui sommes-nous ?</a>
-                <a href="">Notre concept</a>
-                <a href="">Nos engagements</a>
-                <a href="">Politique de confidentialité</a>
+                <a href="{{ path('app_legal') }}">Qui sommes-nous ?</a>
+                <a href="{{ path('app_legal') }}">Notre concept</a>
+                <a href="{{ path('app_legal') }}">Nos engagements</a>
+                <a href="{{ path('app_legal') }}">Politique de confidentialité</a>
             </div>
         </div>
         <div class="footer-content-container">
@@ -22,9 +22,9 @@
                 <p>Restez informé en nous suivant sur les réseaux</p>
             </div>
             <div class="footer-content-social">
-                <img src="{{ asset('images/facebook.png') }}">
-                <img src="{{ asset('images/instagram.png') }}">
-                <img src="{{ asset('images/linkedin.png') }}">
+                <img src="{{ asset('images/facebook.png') }}" width="30" height="30" alt="Facebook" title="Facebook">
+                <img src="{{ asset('images/instagram.png') }}" width="30" height="30" alt="Instagram" title="Instagram">
+                <img src="{{ asset('images/linkedin.png') }}" width="30" height="30" alt="Linkedin" title="Linkedin">
             </div>
         </div>
     </div>

@@ -22,3 +22,7 @@ Username: test1
 Email: test1@gmail.com
 Password: a
 
+Username: abc
+Email: abc@gmail.com
+Password: abc
+

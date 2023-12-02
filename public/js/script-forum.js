@@ -8,7 +8,7 @@ const forumData = {
             "reponse": 10,
             "poster": "23/08/22",
             "nom": "Tommy",
-            "avatar": "https://picsum.photos/200/300?random=1"
+            "avatar": "https://www.zupimages.net/up/23/48/zmyq.png"
         },
         {
             "id": 2,
@@ -18,17 +18,17 @@ const forumData = {
             "reponse": 20,
             "poster": "10/01/23",
             "nom": "Tommy",
-            "avatar": "https://picsum.photos/200/300?random=2"
+            "avatar": "https://www.zupimages.net/up/23/48/zmyq.png"
         },
         {
             "id": 3,
-            "titre": "Pouvez-vous m'aider pour finir ce devoir ?",
+            "titre": "Pouvez-vous m'aider pour ce devoir ?",
             "description": "J’aurais besoin d’aider pour mon td \n" +
                 "sur un développement de carte",
             "reponse": 30,
             "poster": "09/04/23",
             "nom": "Tommy",
-            "avatar": "https://picsum.photos/200/300?random=3"
+            "avatar": "https://www.zupimages.net/up/23/48/zmyq.png"
         }
     ]
 };
@@ -36,24 +36,35 @@ const forumData = {
 document.addEventListener('DOMContentLoaded', () => {
     const panier = document.getElementById('panier');
 
-    const tbody = document.createElement('tbody');
-    panier.appendChild(tbody);
+    const divContainer = document.createElement('div');
+    divContainer.className = 'containeraze'; // Ajoutez une classe au conteneur
 
-    function refreshTable() {
-        tbody.innerHTML = '';
+    panier.appendChild(divContainer);
+
+    function refreshContainer() {
+        divContainer.innerHTML = '';
 
         forumData.sujets.forEach(sujet => {
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td>${sujet.titre}</td>
-                <td>${sujet.description}</td>
-                <td>${sujet.reponse}</td>
-                <td>${sujet.poster}</td>
-                <td>${sujet.nom}</td>
-                <td><img src="${sujet.avatar}" alt="${sujet.nom}" width="50"></td>
-                <!-- Ajoutez d'autres colonnes si nécessaire -->
+            const divSujet = document.createElement('div');
+            divSujet.className = 'sujet'; // Ajoute une classe à la div du sujet
+            divSujet.innerHTML = `
+                <div><img src="https://www.zupimages.net/up/23/48/p4le.png" alt="Chat" title="Chat" width="50" height="50"></div>
+                <div style="max-width: 350px; text-align: center;
+    width: 100%;"><span style="font-family: 'Prompt', sans-serif;
+    font-size: 18px;
+    color: #000;
+    transition: all .5s ease;">${sujet.titre}</span><br>${sujet.description}</div>
+                <div style="text-align: center;"><span style="font-family: 'Prompt', sans-serif;
+    font-size: 18px;
+    color: #000;
+    transition: all .5s ease;">Réponses</span><br>${sujet.reponse}</div>
+                <div style="text-align: center"><span style="font-family: 'Prompt', sans-serif;
+    font-size: 18px;
+    color: #000;
+    transition: all .5s ease;">Posté le ${sujet.poster}</span><br>Par ${sujet.nom}</div>
+                <div><img src="${sujet.avatar}" alt="${sujet.nom}" title="${sujet.nom}" width="50" height="50"></div>
             `;
-            tbody.appendChild(tr);
+            divContainer.appendChild(divSujet);
         });
     }
 
@@ -91,8 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ajouter le nouveau sujet au tableau
         forumData.sujets.push(newSujet);
 
-        // Rafraîchir le tableau
-        refreshTable();
+        // Rafraîchir le conteneur
+        refreshContainer();
 
         // Effacer les valeurs du formulaire
         sujetTitreInput.value = '';
@@ -103,6 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sujetAvatarInput.value = '';
     });
 
-    // Appeler la fonction pour afficher le tableau initial
-    refreshTable();
+    // Appeler la fonction pour afficher le conteneur initial
+    refreshContainer();
 });

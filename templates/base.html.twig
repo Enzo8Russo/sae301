@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#001166"/>
+    <meta name="Description" content="Innovation, Formation, Réussite. Ensemble vers l'Excellence à l'IUT. Optimisez votre réussite académique avec notre application dédiée aux étudiants de l'IUT">
     <title>{% block title %}Default Title{% endblock %}</title>
     {% block stylesheet %}
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link rel="manifest" href="{{ asset('js/manifest.json') }}">
+        <link rel="icon" href="https://i.imgur.com/wLHWS26.png">
+        <link rel=”icon” href=”https://i.imgur.com/wLHWS26.png” type=”image/x-icon”>
+        <link rel="apple-touch-icon" href="https://i.imgur.com/wLHWS26.png">
     {% endblock %}
 </head>
 <body>

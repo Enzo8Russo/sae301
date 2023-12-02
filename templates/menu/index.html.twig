@@ -29,7 +29,7 @@
                     <span style="margin-right: 5px;">Profil</span>
                     <img src="{{ asset('images/person-outline.svg') }}" width="23" height="23">
                 </a>
-                <a href="#" class="a-menu btn ala">
+                <a href="{{ path('app_deconnexion') }}" class="a-menu btn ala">
                     <span style="margin-right: 5px;">Déconnexion</span>
                     <img src="{{ asset('images/log-out-outline.svg') }}" width="23" height="23">
                 </a>
@@ -61,7 +61,7 @@
                 {# L'utilisateur est connecté, affichez l'onglet du profil #}
                 <li><a class="menu--boutton" href="{{ path('app_calendrier') }}">Calendrier</a></li>
                 <li><a class="menu--boutton" href="{{ path('app_profil') }}">Profil</a></li>
-                <li><a class="menu--connexion" href="#">Déconnexion</a></li>
+                <li><a class="menu--connexion" href="{{ path('app_deconnexion') }}">Déconnexion</a></li>
             {% else %}
                 {# L'utilisateur n'est pas connecté, affichez les onglets de connexion et d'inscription #}
                 <li><a class="menu--connexion" href="{{ path('app_connexion') }}">Connexion</a></li>

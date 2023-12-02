@@ -45,6 +45,14 @@ calendrier:
     path: /calendrier
     controller: App\Controller\CalendrierController::index
 
+legal:
+    path: /legal
+    controller: App\Controller\LegalController::index
+
+deconnexion:
+    path: /deconnexion
+    controller: App\Controller\DeconnexionController::index
+
 devoir:
     path: /devoir
     controller: App\Controller\DevoirController::index

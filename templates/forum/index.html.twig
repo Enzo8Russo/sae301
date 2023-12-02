@@ -4,32 +4,40 @@
 
 {% block body %}
     </header>
-    <div id="panier"></div>
+    <div id="panier" style="    display: flex;
+    align-items: center;
+    justify-content: center;"></div>
 
-    <!-- Formulaire pour ajouter un nouveau sujet -->
-    <form id="addSujetForm">
-        <label for="sujetTitre">Titre du sujet :</label>
-        <input type="text" id="sujetTitre" required>
+    <div class="form-container">
+        <div class="form-titre">
+            <h1 class="form-titre_start" style="color:black; margin-right: 8px;">Ajouter</h1>
+            <h1 class="form-titre_end">Un Topic</h1>
+        </div>
+        <form id="addSujetForm">
+            <label class="form-label" for="sujetTitre">Titre du sujet :</label>
+            <input class="form-input" type="text" id="sujetTitre" name="sujetTitre" required>
 
-        <label for="sujetDescription">Description :</label>
-        <textarea id="sujetDescription" rows="4" required></textarea>
+            <label for="sujetDescription">Description :</label>
+            <input id="sujetDescription" type="text" required>
 
-        <label for="sujetReponse">Nombre de réponses :</label>
-        <input type="number" id="sujetReponse" required>
+            <label class="form-label" for="sujetReponse">Nombre de réponses :</label>
+            <input class="form-input" type="number" id="sujetReponse" name="sujetReponse" required>
 
-        <label for="sujetPoster">Date de publication :</label>
-        <input type="text" id="sujetPoster" required>
+            <label class="form-label" for="sujetPoster">Date de publication :</label>
+            <input class="form-input" type="text" id="sujetPoster" name="sujetPoster" required>
 
-        <label for="sujetNom">Nom de l'auteur :</label>
-        <input type="text" id="sujetNom" required>
+            <label class="form-label" for="sujetNom">Nom de l'auteur :</label>
+            <input class="form-input" type="text" id="sujetNom" name="sujetNom" required>
 
-        <label for="sujetAvatar">URL de l'avatar :</label>
-        <input type="text" id="sujetAvatar" required>
+            <label class="form-label" for="sujetAvatar">URL de l'avatar :</label>
+            <input class="form-input" type="text" id="sujetAvatar" name="sujetAvatar" required>
 
-        <!-- Ajoutez d'autres champs si nécessaire -->
 
-        <button type="submit">Ajouter</button>
-    </form>
+            <button class="form-submit" type="submit">Ajouter</button>
+        </form>
+    </div>
 
     <script src="{{ asset('js/script-forum.js') }}"></script>
 {% endblock %}
+
+

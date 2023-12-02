@@ -4,7 +4,7 @@
 
 {% block body %}
     </header>
-    <div class="container">
+    <div class="form-container">
         {# Afficher les messages flash #}
         {% for message in app.flashes('error') %}
             <div class="alert alert-danger">
@@ -12,15 +12,22 @@
             </div>
         {% endfor %}
 
-        <form id="loginForm" method="post" action="{{ path('app_connexion') }}">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
+        <div class="form-titre">
+            <h1 class="form-titre1" style="color:black">SE</h1>
+            <h1 class="form-titre2">CONNECTER</h1>
+        </div>
 
-            <label for="password">Mot de passe:</label>
-            <input type="password" id="password" name="password" required>
+        <form id="registrationForm" method="post" action="{{ path('app_connexion') }}">
+            <label class="form-label" for="email">Email:</label>
+            <input class="form-input" type="text" id="email" name="email" required>
 
-            <button type="submit">Se connecter</button>
+            <label class="form-label" for="password">Mot de passe:</label>
+            <input class="form-input" type="password" id="password" name="password" required>
+
+            <button class="form-submit" type="submit">SE CONNECTER</button>
         </form>
+
+        <a class="no-account" href="{{ path('app_inscription') }}">Créer un compte</a>
     </div>
 
     <script src="{{ asset('js/script-connexion.js') }}"></script>
